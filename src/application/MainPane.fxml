@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1366.0" style="-fx-background-color: #B1D4E0;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+    <children>
+        <Pane layoutX="-3.0" prefHeight="600.0" prefWidth="265.0" style="-fx-background-color: #B1D4E0; -fx-border-style: hidden;">
+            <children>
+                <HBox layoutX="19.0" layoutY="540.0" prefHeight="32.0" prefWidth="235.0" spacing="1.0">
+                    <children>
+                        <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insertButton" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #2E8BC0;" text="Ekle" textFill="WHITE" />
+                        <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateButton" prefHeight="30.0" prefWidth="66.0" style="-fx-background-color: #2E8BC0;" text="Güncelle" textFill="WHITE" />
+                        <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteButton" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: #2E8BC0;" text="Sil" textFill="WHITE" />
+                        <ImageView fitHeight="27.0" fitWidth="33.0" onMousePressed="#ClearButton" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                          <Image url="@/images/broom (1).png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <VBox layoutX="117.0" layoutY="274.0" prefHeight="244.0" prefWidth="129.0" spacing="10.0">
+                    <children>
+                        <TextField fx:id="idField" />
+                        <TextField fx:id="nameField" />
+                        <TextField fx:id="surnameField" />
+                        <TextField fx:id="departmentField" />
+                        <TextField fx:id="mailField" />
+                        <DatePicker fx:id="datePicker" />
+                        <DatePicker fx:id="datePicker2" prefHeight="25.0" prefWidth="138.0" />
+
+                    </children>
+                </VBox>
+                <VBox layoutX="14.0" layoutY="274.0" prefHeight="244.0" prefWidth="98.0" spacing="18.0">
+                    <children>
+                        <Label text="Numara" textFill="#145da0">
+                            <font>
+                                <Font name="Lucida Bright" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Ad" textFill="#145da0">
+                            <font>
+                                <Font name="Lucida Bright" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Soyad" textFill="#145da0">
+                            <font>
+                                <Font name="Lucida Bright" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Bölüm" textFill="#145da0">
+                            <font>
+                                <Font name="Lucida Bright" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Mail" textFill="#145da0">
+                            <font>
+                                <Font name="Lucida Bright" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label text="Staj Başlangıç" textFill="#145da0">
+                            <font>
+                                <Font name="Lucida Bright" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label prefHeight="18.0" prefWidth="71.0" text="Staj Bitiş" textFill="#145da0">
+                            <font>
+                                <Font name="Lucida Bright" size="14.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </VBox>
+            </children></Pane>
+        <VBox layoutX="957.0" layoutY="68.0" prefHeight="473.0" prefWidth="392.0">
+            <children>
+                <ScrollPane fx:id="scrollpane" pannable="true" prefHeight="136.0" prefWidth="375.0">
+                    <content>
+                        <Label fx:id="uyarılabel" prefHeight="66.0" prefWidth="387.0" text="Yaklaşan staj tarihi bulunmamaktadır." textFill="#1041b2">
+                            <font>
+                                <Font name="Lucida Bright Demibold" size="16.0" />
+                            </font>
+                        </Label>
+                    </content></ScrollPane>
+                <Pane prefHeight="338.0" prefWidth="392.0">
+               <children>
+                  <Label layoutX="21.0" layoutY="14.0" text="Label" />
+               </children></Pane>
+            </children></VBox>
+        <TableView id="font" fx:id="TableView" editable="true" layoutX="268.0" layoutY="59.0" onMouseClicked="#clickItem" onSort="#Sorting" prefHeight="518.0" prefWidth="653.0" style="-fx-background-color: #E7F2F8; -fx-font-size: 14px; -fx-text-fill: #145da0; -fx-font-family: Lucida Bright;">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="85.0" styleClass="font" text="Numara" />
+                <TableColumn fx:id="nameColumn" prefWidth="83.0" text="Ad" />
+                <TableColumn fx:id="surnameColumn" prefWidth="86.0" text="Soyad" />
+                <TableColumn fx:id="departmentColumn" prefWidth="87.0" text="Bölüm" />
+                <TableColumn fx:id="mailColumn" prefWidth="94.0" text="Mail" />
+                <TableColumn fx:id="dateColumn" prefWidth="104.0" text="Başlama Tarihi" />
+                <TableColumn fx:id="dateColumn2" prefWidth="113.0" text="Bitiş Tarihi" />
+            </columns>
+        </TableView>
+        <HBox alignment="TOP_CENTER" layoutX="268.0" layoutY="14.0" prefHeight="32.0" prefWidth="653.0">
+            <children>
+                <ImageView fx:id="image1" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                       <Image url="@/images/loupe.png" />
+                    </image>
+                </ImageView>
+
+
+                <TextField fx:id="filteredField" nodeOrientation="LEFT_TO_RIGHT" onAction="#Filtering" prefHeight="30.0" prefWidth="570.0">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font></TextField>
+            </children>
+        </HBox>
+        <Circle fx:id="mycircle" fill="DODGERBLUE" layoutX="118.0" layoutY="138.0" radius="79.0" stroke="BLACK" strokeType="INSIDE" />
+        <HBox prefHeight="100.0" prefWidth="200.0" />
+
+    </children>
+    <padding>
+        <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
+    </padding>
+</AnchorPane>

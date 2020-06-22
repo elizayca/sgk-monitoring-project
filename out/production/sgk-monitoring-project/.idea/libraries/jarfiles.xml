@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="jarfiles">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Desktop/jarfiles" />
+      <root url="jar://$USER_HOME$/Desktop/jarfiles/javafx-swt.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/jarfiles/javafx.base.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/jarfiles/javafx.controls.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/jarfiles/javafx.fxml.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/jarfiles/javafx.graphics.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/jarfiles/javafx.media.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/jarfiles/javafx.swing.jar!/" />
+      <root url="jar://$USER_HOME$/Desktop/jarfiles/javafx.web.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$USER_HOME$/Desktop/jarfiles" recursive="false" />
+  </library>
+</component>
